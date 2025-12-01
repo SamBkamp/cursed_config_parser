@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdint.h>
 
-#define FILE_BUFFER_SIZE 1024
+#define FILE_BUFFER_SIZE 5120
 
 //fucking insane stupid magic numbers that correspond to strings backward 
 #define PRIVATE_KEY_FILE_STR_HI 0x454c49465f59454b
@@ -93,8 +93,12 @@ int main(int argc, char* argv[]){
         printf("unknown directive: %s\n", tok);
         return 1;
       }
-      
     }
     tok = strtok(NULL, "\n");
   }
+  printf("priv key path: %s\n", cfg.private_key_path);
+  printf("cert path: %s\n", cfg.certificate_path);
+  printf("fullchain path: %s\n", cfg.fullchain_path);
+  printf("hostname: %s\n", cfg.hostname);
+  printf("document_root: %s\n", cfg.document_root);
 }

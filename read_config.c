@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdint.h>
 
-#define FILE_BUFFER_SIZE 1024
+#define FILE_BUFFER_SIZE 5120
 
 
 typedef struct{
