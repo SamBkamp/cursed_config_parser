@@ -4,7 +4,7 @@ this centers around 2 implementations of reading config data from a config file 
 The rules for the config file are:
 - the valid config fields are known
 - the config fields are 16 bytes, the values are arbitrary length
-- the rule for valid kv pairs is defined as `field[ ]?=[ ]*value`
+- the rule for valid kv pairs is defined as `g/field[ ]?=[ ]*value/`
 - the whole file can't be larger than 5KiB
 
 I added some redundant lines just to make the test take longer
